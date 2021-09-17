@@ -1,4 +1,9 @@
+let currentPlayer = 'X';
 
-function board(){
-  alert('Ouch!')
+function board(currentPosition){
+  if (currentPosition.innerText != "") {
+    return;
+  }
+      currentPosition.innerText = currentPlayer;
+      currentPlayer == 'X' ? currentPlayer = 'O' : currentPlayer = 'X';
 }
