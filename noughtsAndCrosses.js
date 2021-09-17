@@ -1,0 +1,4 @@
+
+function board(){
+  alert('Ouch!')
+}
