@@ -12,7 +12,13 @@ function checkGameBoard(){
       let firstOne = document.getElementById('0_'+i).innerText;
       let firstTwo = document.getElementById('1_'+i).innerText;
       let firstThree = document.getElementById('2_'+i).innerText;
-      if (firstOne == "") continue;
-      if (firstOne == firstTwo && firstOne == firstThree) {alert("You've won");}
+
+      checkForWinner(firstOne, firstTwo, firstThree);
     }
+}
+
+function checkForWinner(first, second, third){
+  if (first != "" && first == second && first == third) {
+    alert("You've won");
+  }
 }
