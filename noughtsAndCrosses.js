@@ -9,11 +9,16 @@ function board(currentPosition){
 
 function checkGameBoard(){
     for (var i = 0; i < 2; i++) {
-      let firstOne = document.getElementById('0_'+i).innerText;
-      let firstTwo = document.getElementById('1_'+i).innerText;
-      let firstThree = document.getElementById('2_'+i).innerText;
+      let rowOne = document.getElementById('0_'+i).innerText;
+      let rowTwo = document.getElementById('1_'+i).innerText;
+      let rowThree = document.getElementById('2_'+i).innerText;
 
-      checkForWinner(firstOne, firstTwo, firstThree);
+      let columnOne = document.getElementById(i + '_0').innerText;
+      let columnTwo = document.getElementById(i + '_1').innerText;
+      let columnThree = document.getElementById(i + '_2').innerText;
+
+      checkForWinner(rowOne, rowTwo, rowThree);
+      checkForWinner(columnOne, columnTwo, columnThree);
     }
 }
 
