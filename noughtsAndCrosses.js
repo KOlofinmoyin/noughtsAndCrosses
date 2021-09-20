@@ -1,7 +1,8 @@
 let currentPlayer = 'X';
+let won = false;
 
 function board(currentPosition){
-  if (currentPosition.innerText != "") return;
+  if (currentPosition.innerText != "" || won) return;
       currentPosition.innerText = currentPlayer;
       currentPlayer == 'X' ? currentPlayer = 'O' : currentPlayer = 'X';
       checkGameBoard();
@@ -22,6 +23,7 @@ function checkGameBoard(){
 function checkForWinner(first, second, third){
   if (first != "" && first == second && first == third) {
     alert("You've won");
+    won = true;
     return;
   }
 }
